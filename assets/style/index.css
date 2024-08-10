@@ -19,6 +19,11 @@ body{
 .col-3{
     cursor: pointer;
 }
-.home{
-    
+.shade{
+    overflow: visible;
+}
+
+
+.notifications{
+    overflow: visible !important;
 }
