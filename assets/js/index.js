@@ -58,11 +58,8 @@ messages.addEventListener('click', (e) => {
 });
 
 
-footer
+// footer
 
-
-const credit = document.querySelector('#credit');
-credit.innerHTML=`developed by MD rakibul hasan`
 
 
 
@@ -77,4 +74,15 @@ copyRight.innerHTML=''
     copyRight.innerHTML+= `<span class="copy-lettr">${letter}</span>`
 });
 
+
+const credit = document.querySelector('#credit');
+credit.innerHTML=`developed by MD rakibul hasan`;
+
+const creditLetter = credit.textContent.split('');
+
+credit.innerHTML = '';
+
+[...creditLetter].forEach((letter) => {
+    credit.innerHTML+=`<span class="credit-letter">${letter}</span>`
+});
 
