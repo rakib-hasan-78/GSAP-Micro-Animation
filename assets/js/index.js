@@ -65,18 +65,22 @@ messages.addEventListener('click', (e) => {
 
 const copyRight = document.querySelector('#copy-right');
 
-copyRight.innerHTML = `&copy; ${new Date().getFullYear()} all the rights reserved.`;
+copyRight.innerHTML = `&copy;${new Date().getFullYear()}--all--the--rights--reserved.`;
 
 const copyRightLetters = copyRight.textContent.split('');
 
 copyRight.innerHTML=''
 ;[...copyRightLetters].forEach((letter)=>{
-    copyRight.innerHTML+= `<span class="copy-lettr">${letter}</span>`
+    copyRight.innerHTML+= `<span class="copy-letter">${letter}</span>`
 });
 
 
+gsap.set('.copy-letter', {display:'inline-block'});
+gsap.fromTo('.copy-letter', {y:'100%',opacity:0}, {y:0, opacity:1, delay:2,stagger:.05, ease:'back.out(3,4)'});
+
+
 const credit = document.querySelector('#credit');
-credit.innerHTML=`developed by MD rakibul hasan`;
+credit.innerHTML=`developed--by--MD--rakibul--hasan`;
 
 const creditLetter = credit.textContent.split('');
 
@@ -85,4 +89,8 @@ credit.innerHTML = '';
 [...creditLetter].forEach((letter) => {
     credit.innerHTML+=`<span class="credit-letter">${letter}</span>`
 });
+
+
+gsap.set('.credit-letter', {display:'inline-block'});
+gsap.fromTo('.credit-letter', {y:'100%',opacity:0}, {y:0, opacity:1, delay:2,stagger:.05, ease:'back.out(3,4)'});
 
