@@ -24,6 +24,7 @@ body{
 }
 
 
+.message-svg,
 .notifications{
     overflow: visible !important;
 }

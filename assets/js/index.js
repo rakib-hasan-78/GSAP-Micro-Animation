@@ -38,4 +38,20 @@ notifications.addEventListener('click', (e) => {
     gsap.fromTo('.bell', {rotation:-5}, {rotation:0 , duration:2, ease: "elastic.out(5,0.2)"});
     gsap.fromTo('.ringer', {rotation:-3, x:0.5}, {rotation:0 , duration:2, ease: "elastic.out(5,0.2)", x:0});
     gsap.fromTo('.wave', {scale:0, opacity:1}, {scale:1.3, opacity:0, duration:1});
-})
+});
+
+// messages -->
+
+const messages = document.querySelector('.msg');
+
+    tl.set('.envelope-flip',{transformOrigin:'top'});
+    
+messages.addEventListener('click', (e) => {
+
+    e.preventDefault();
+    tl.fromTo('.message-svg', {scale:1},{scale:.90});
+    tl.fromTo('.envelope-flip', {scale:1},{scale:-1}),"<50%";
+    tl.fromTo('.message-svg', {scale:.90},{scale:1},"<50%");
+    tl.fromTo('.inside-message', {y:0, opacity:1},{y:-40, opacity:0, duration:.85});
+    tl.to('.envelope-flip',{scale:1},"<50%");
+});
