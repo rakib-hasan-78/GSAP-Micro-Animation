@@ -56,3 +56,25 @@ messages.addEventListener('click', (e) => {
     tl.fromTo('.inside-message', {y:0, opacity:1},{y:-40, opacity:0, duration:.85});
     tl.to('.envelope-flip',{scale:1},"<50%");
 });
+
+
+footer
+
+
+const credit = document.querySelector('#credit');
+credit.innerHTML=`developed by MD rakibul hasan`
+
+
+
+const copyRight = document.querySelector('#copy-right');
+
+copyRight.innerHTML = `&copy; ${new Date().getFullYear()} all the rights reserved.`;
+
+const copyRightLetters = copyRight.textContent.split('');
+
+copyRight.innerHTML=''
+;[...copyRightLetters].forEach((letter)=>{
+    copyRight.innerHTML+= `<span class="copy-lettr">${letter}</span>`
+});
+
+
