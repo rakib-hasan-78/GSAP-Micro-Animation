@@ -26,7 +26,8 @@ home.addEventListener('click', (e)=>{
     gsap.fromTo('.feather', {scale:0 , y: -5},{scale:1.5 , y:25, duration:1, stagger:.5},"<");
     gsap.fromTo('.right-feather', {x:0}, {x:5},"<");
 });
-
+// card-body--->
+gsap.fromTo('.card-content', {y:20, opacity:0, scale:0},{y:0, opacity:1, ease:"back.inOut(1.4)", duration:2, scale:1})
 // notifications ---->
 
 const notifications = document.querySelector('.notifications');
@@ -45,7 +46,7 @@ notifications.addEventListener('click', (e) => {
 const messages = document.querySelector('.msg');
 
     tl.set('.envelope-flip',{transformOrigin:'top'});
-    
+
 messages.addEventListener('click', (e) => {
 
     e.preventDefault();
